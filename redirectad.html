@@ -1,0 +1,29 @@
+<script>
+function redirects()
+{
+	var i=5;
+	function digits() {
+	if (i < 0)
+	{
+	redirect();
+	} else {
+	document.getElementById ("digits").innerHTML="0"+i;
+	i=parseInt(i)-1;
+	}
+	setTimeout(digits,1000);
+	}
+	digits();
+};
+
+function redirect()
+{
+document.body.innerHTML="";
+};
+</script>
+
+<body onload="redirects()">
+<center style="margin-top:50%;color:green;">
+<h1> Please wait <b style="font-size:xx-large;color:red;"><strong id="digits"><strong></b> Seconds. This will be redirected to another page... </h1>
+</center>
+</body>
+</html>
